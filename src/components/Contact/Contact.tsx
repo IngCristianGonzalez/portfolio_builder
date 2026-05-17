@@ -1,10 +1,8 @@
 "use client";
 
-
-import { Mail, MapPin } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 import { useLocale } from "next-intl";
-
 
 export default function Contact() {
 
@@ -20,117 +18,233 @@ export default function Contact() {
       "
     >
 
-      <div
-        className="
-        max-w-7xl
-        mx-auto
-        "
-      >
+      <div className="max-w-7xl mx-auto">
+
+        <p
+          className="
+          uppercase
+          tracking-[4px]
+          text-cyan-500
+          text-sm
+          "
+        >
+          {locale==="es"
+            ? "Contacto"
+            : "Contact"}
+        </p>
+
+        <h2
+          className="
+          text-5xl
+          md:text-6xl
+          font-bold
+          mt-4
+          "
+        >
+          {locale==="es"
+            ? "¿Trabajemos juntos?"
+            : "Let's work together?"}
+        </h2>
+
+        <p
+          className="
+          mt-8
+          max-w-xl
+          text-zinc-500
+          text-lg
+          leading-relaxed
+          "
+        >
+          {locale==="es"
+            ? "Siempre estoy abierto a nuevas oportunidades y proyectos interesantes. Si tienes una idea o necesitas ayuda con un proyecto, no dudes en contactarme."
+            : "I'm always open to new opportunities and interesting projects. If you have an idea or need help with a project, don't hesitate to contact me."}
+        </p>
 
         <div
           className="
-          border
-          rounded-3xl
-          p-10
+          mt-16
+          grid
+          md:grid-cols-2
+          gap-20
           "
         >
 
-          <p className="text-cyan-500">
+          {/* izquierda */}
 
-            {
-              locale==="es"
-              ? "Disponible para proyectos"
-              : "Available for projects"
-            }
+          <div className="space-y-8">
 
-          </p>
+            <div className="flex items-center gap-4">
 
-          <h2
-            className="
-            text-5xl
-            font-bold
-            mt-4
-            "
-          >
-
-            {
-              locale==="es"
-              ? "Trabajemos juntos"
-              : "Let's work together"
-            }
-
-          </h2>
-
-          <p
-            className="
-            mt-6
-            text-zinc-500
-            dark:text-zinc-400
-            "
-          >
-
-            {
-              locale==="es"
-              ? "¿Tienes una idea o proyecto? Hablemos."
-              : "Have an idea or project? Let's talk."
-            }
-
-          </p>
-
-          <div
-            className="
-            mt-10
-            grid
-            md:grid-cols-2
-            gap-8
-            "
-          >
-
-            <div className="space-y-5">
-
-              <div className="flex gap-3 items-center">
+              <div
+                className="
+                w-12
+                h-12
+                rounded-full
+                bg-white/5
+                flex
+                items-center
+                justify-center
+                "
+              >
                 <Mail size={18}/>
-                <span>
-                  cristian@email.com
-                </span>
               </div>
 
-              <div className="flex gap-3 items-center">
-                <MapPin size={18}/>
-                <span>
-                  Colombia
-                </span>
+              <div>
+                <p className="text-xs text-zinc-500 uppercase">
+                  Email
+                </p>
+
+                <p className="font-medium">
+                  correo@email.com
+                </p>
               </div>
 
             </div>
 
-            <div className="space-y-5">
+            <div className="flex items-center gap-4">
 
-              <a
-                href="#"
+              <div
                 className="
+                w-12
+                h-12
+                rounded-full
+                bg-white/5
                 flex
-                gap-3
                 items-center
-                hover:text-cyan-500
+                justify-center
                 "
               >
-               <FaGithub size={18}/>
-    GitHub
-              </a>
+                <MessageCircle size={18}/>
+              </div>
 
-              <a
-                href="#"
+              <div>
+                <p className="text-xs text-zinc-500 uppercase">
+                  WhatsApp
+                </p>
+
+                <p className="font-medium">
+                  +57 300 0000000
+                </p>
+              </div>
+
+            </div>
+
+            <div className="flex items-center gap-4">
+
+              <div
                 className="
+                w-12
+                h-12
+                rounded-full
+                bg-white/5
                 flex
-                gap-3
                 items-center
-                hover:text-cyan-500
+                justify-center
                 "
               >
-                <FaLinkedin size={18}/>
-    LinkedIn
-              </a>
+                <MapPin size={18}/>
+              </div>
+
+              <div>
+                <p className="text-xs text-zinc-500 uppercase">
+                  {locale==="es"
+                  ?"Ubicación"
+                  :"Location"}
+                </p>
+
+                <p className="font-medium">
+                  Colombia
+                </p>
+              </div>
+
+            </div>
+
+            <div className="flex items-center gap-4">
+
+              <div
+                className="
+                w-12
+                h-12
+                rounded-full
+                bg-white/5
+                flex
+                items-center
+                justify-center
+                "
+              >
+                <Clock size={18}/>
+              </div>
+
+              <div>
+                <p className="text-xs text-zinc-500 uppercase">
+                  {locale==="es"
+                  ?"Zona horaria"
+                  :"Timezone"}
+                </p>
+
+                <p className="font-medium">
+                  GMT-5
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* derecha */}
+
+          <div
+            className="
+            flex
+            flex-col
+            justify-center
+            gap-8
+            "
+          >
+
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+              w-fit
+              px-6
+              py-4
+              rounded-full
+              bg-white/5
+              flex
+              items-center
+              gap-3
+              hover:bg-cyan-500/20
+              transition
+              "
+            >
+
+              <FaLinkedin />
+
+              LinkedIn
+
+            </a>
+
+            <div className="flex items-center gap-3">
+
+              <div
+                className="
+                w-3
+                h-3
+                rounded-full
+                bg-green-500
+                animate-pulse
+                "
+              />
+
+              <span className="text-zinc-400">
+
+                {locale==="es"
+                ? "Disponible para freelance"
+                : "Available for freelance"}
+
+              </span>
 
             </div>
 

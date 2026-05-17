@@ -4,5 +4,10 @@
     "title":"Hola, soy",
     "name":"Cristian González",
     "subtitle":"Ingeniero de Sistemas especializado en sistemas escalables"
+  },
+  "navbar": {
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto"
   }
 }

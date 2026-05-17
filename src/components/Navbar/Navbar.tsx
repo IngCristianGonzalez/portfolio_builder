@@ -1,11 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
+
+  const locale = useLocale();
+
+  const t = useTranslations("navbar");
+
   return (
+
     <nav
       className="
       fixed
@@ -17,6 +25,7 @@ export default function Navbar() {
       border-b
       "
     >
+
       <div
         className="
         max-w-7xl
@@ -28,14 +37,15 @@ export default function Navbar() {
         justify-between
         "
       >
+
         <Link
-          href="/"
+          href={`/${locale}`}
           className="
           font-bold
           text-xl
           "
         >
-          Cristian.dev
+          ingcristiangonzalez.lat
         </Link>
 
         <div className="flex items-center gap-6">
@@ -43,31 +53,53 @@ export default function Navbar() {
           <ul className="hidden md:flex gap-6">
 
             <li>
-              <a href="#experience">
-                Experience
-              </a>
+              <Link
+                href="#experience"
+                className="
+                hover:text-cyan-500
+                transition
+                "
+              >
+                {t("experience")}
+              </Link>
             </li>
 
             <li>
-              <a href="#projects">
-                Projects
-              </a>
+              <Link
+                href="#projects"
+                className="
+                hover:text-cyan-500
+                transition
+                "
+              >
+                {t("projects")}
+              </Link>
             </li>
 
             <li>
-              <a href="#contact">
-                Contact
-              </a>
+              <Link
+                href="#contact"
+                className="
+                hover:text-cyan-500
+                transition
+                "
+              >
+                {t("contact")}
+              </Link>
             </li>
 
           </ul>
 
-          <LanguageSwitcher/>
+          <LanguageSwitcher />
 
-          <ThemeToggle/>
+          <ThemeToggle />
 
         </div>
+
       </div>
+
     </nav>
+
   );
+
 }

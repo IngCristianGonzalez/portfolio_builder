@@ -3,7 +3,7 @@
 import { Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { useLocale } from "next-intl";
-
+import { profile } from "@/lib/profile";
 export default function Contact() {
 
   const locale = useLocale();
@@ -95,7 +95,7 @@ export default function Contact() {
                 </p>
 
                 <p className="font-medium">
-                  correo@email.com
+                  {profile.email}
                 </p>
               </div>
 
@@ -123,7 +123,7 @@ export default function Contact() {
                 </p>
 
                 <p className="font-medium">
-                  +57 300 0000000
+                 {profile.number}
                 </p>
               </div>
 
@@ -153,7 +153,7 @@ export default function Contact() {
                 </p>
 
                 <p className="font-medium">
-                  Colombia
+                 {profile.location}
                 </p>
               </div>
 
@@ -203,7 +203,7 @@ export default function Contact() {
           >
 
             <a
-              href="https://linkedin.com"
+            href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="

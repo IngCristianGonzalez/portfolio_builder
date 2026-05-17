@@ -1,13 +1,12 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useTheme } from "next-themes";
 import { skills } from "@/lib/skills";
 
 export default function Skills() {
   const locale = useLocale();
 
-  const { resolvedTheme } = useTheme();
+ 
 
   const data =
     skills[
@@ -128,21 +127,15 @@ export default function Skills() {
   hover:scale-105
   "
                     >
-
-                      <Icon
-                        size={50}
-                        className="
-  transition-all
-  duration-300
-  group-hover:scale-125
-  "
-                        style={{
-                          color:
-                            resolvedTheme === "dark"
-                              ? item.darkColor
-                              : item.lightColor
-                        }}
-                      />
+<Icon
+  size={50}
+  className={[
+    item.className,
+    "transition-all",
+    "duration-300",
+    "group-hover:scale-125"
+  ].join(" ")}
+/>
 
                       <span
                         className="

@@ -54,8 +54,8 @@ export default function Philosophy() {
 
             {
               locale==="es"
-              ? "Nunca hay dos proyectos iguales. Cada uno merece una atención única, un enfoque personalizado y el compromiso de entregar algo que realmente haga la diferencia."
-              : "No two projects are the same. Each deserves unique attention, a personalized approach, and a commitment to delivering something that truly makes a difference."
+              ? "Construyo soluciones tecnológicas que van desde sistemas empresariales y arquitecturas backend hasta aplicaciones modernas y procesamiento de datos, transformando ideas y necesidades en productos reales."
+              : "I build technological solutions ranging from enterprise systems and backend architectures to modern applications and data processing, transforming ideas and needs into real products."
             }
 
           </blockquote>

@@ -12,25 +12,41 @@ import {
   SiGit
 } from "react-icons/si";
 
-const techItems = {
+import { IconType } from "react-icons";
+
+type SkillItem = {
+  name: string;
+  icon: IconType;
+  className: string;
+};
+
+type TechCategory =
+  | "backend"
+  | "frontend"
+  | "database"
+  | "devops";
+
+type SkillGroup = {
+  category: string;
+  items: SkillItem[];
+};
+
+const techItems: Record<TechCategory, SkillItem[]> = {
   backend: [
     {
       name: "Laravel",
       icon: SiLaravel,
-      lightColor: "#FF2D20",
-      darkColor: "#FF2D20"
+      className: "text-[#FF2D20]"
     },
     {
       name: "Spring Boot",
       icon: SiSpringboot,
-      lightColor: "#6DB33F",
-      darkColor: "#6DB33F"
+      className: "text-[#6DB33F]"
     },
     {
       name: "Node.js",
       icon: SiNodedotjs,
-      lightColor: "#339933",
-      darkColor: "#339933"
+      className: "text-[#339933]"
     }
   ],
 
@@ -38,24 +54,17 @@ const techItems = {
     {
       name: "React",
       icon: SiReact,
-      lightColor: "#61DAFB",
-      darkColor: "#61DAFB"
+      className: "text-[#61DAFB]"
     },
     {
       name: "Next.js",
       icon: SiNextdotjs,
-
-      // negro en claro
-      lightColor: "#000000",
-
-      // blanco en oscuro
-      darkColor: "#FFFFFF"
+      className: "text-black dark:text-white"
     },
     {
       name: "TypeScript",
       icon: SiTypescript,
-      lightColor: "#3178C6",
-      darkColor: "#3178C6"
+      className: "text-[#3178C6]"
     }
   ],
 
@@ -63,20 +72,17 @@ const techItems = {
     {
       name: "PostgreSQL",
       icon: SiPostgresql,
-      lightColor: "#4169E1",
-      darkColor: "#4169E1"
+      className: "text-[#4169E1]"
     },
     {
       name: "MySQL",
       icon: SiMysql,
-      lightColor: "#4479A1",
-      darkColor: "#4479A1"
+      className: "text-[#4479A1]"
     },
     {
       name: "MongoDB",
       icon: SiMongodb,
-      lightColor: "#47A248",
-      darkColor: "#47A248"
+      className: "text-[#47A248]"
     }
   ],
 
@@ -84,19 +90,17 @@ const techItems = {
     {
       name: "Docker",
       icon: SiDocker,
-      lightColor: "#2496ED",
-      darkColor: "#2496ED"
+      className: "text-[#2496ED]"
     },
     {
       name: "Git",
       icon: SiGit,
-      lightColor: "#F05032",
-      darkColor: "#F05032"
+      className: "text-[#F05032]"
     }
   ]
 };
 
-export const skills = {
+export const skills: Record<"es" | "en", SkillGroup[]> = {
   es: [
     {
       category: "Backend",

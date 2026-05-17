@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "status":"Available for projects freelance",
+    "title":"Hi, I'm",
+    "name":"Cristian González",
+    "subtitle":"System Engineer specialized in scalable systems",
+    "role": "Ingeniero de Software",
+    "focus": "Sistemas Escalables",
+     "projects": "Projects"
+  },
+   "navbar": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact" 
+  }
+}

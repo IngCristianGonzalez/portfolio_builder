@@ -11,7 +11,7 @@ export default function Skills() {
 
   const data =
     skills[
-      locale as keyof typeof skills
+    locale as keyof typeof skills
     ];
 
   return (
@@ -25,8 +25,8 @@ export default function Skills() {
 
       <div className="max-w-7xl mx-auto">
 
-       <h2
-  className="
+        <h2
+          className="
   text-4xl
   font-bold
   mb-16
@@ -34,7 +34,7 @@ export default function Skills() {
   text-zinc-900
   dark:text-white
   "
->
+        >
           {
             locale === "es"
               ? "Herramientas"
@@ -70,13 +70,13 @@ export default function Skills() {
               "
             >
 
-             <h3
-  className="
+              <h3
+                className="
   text-2xl
   font-bold
   mb-6
   "
->
+              >
                 {group.category}
               </h3>
 
@@ -94,9 +94,9 @@ export default function Skills() {
 
                   return (
 
-    <div
-  key={item.name}
-  className="
+                    <div
+                      key={item.name}
+                      className="
   group
 
   flex
@@ -127,24 +127,25 @@ export default function Skills() {
   hover:-translate-y-2
   hover:scale-105
   "
->
+                    >
 
                       <Icon
                         size={50}
-                        color={
-                          resolvedTheme === "dark"
-                            ? item.darkColor
-                            : item.lightColor
-                        }
                         className="
-                        transition-all
-                        duration-300
-                        group-hover:scale-125
-                        "
+  transition-all
+  duration-300
+  group-hover:scale-125
+  "
+                        style={{
+                          color:
+                            resolvedTheme === "dark"
+                              ? item.darkColor
+                              : item.lightColor
+                        }}
                       />
 
-   <span
-  className="
+                      <span
+                        className="
   mt-3
   text-sm
   font-medium
@@ -157,7 +158,7 @@ export default function Skills() {
 
   transition-colors
   "
->
+                      >
                         {item.name}
                       </span>
 

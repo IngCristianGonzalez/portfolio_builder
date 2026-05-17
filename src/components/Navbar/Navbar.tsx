@@ -21,8 +21,17 @@ export default function Navbar() {
       left-0
       right-0
       z-50
-      backdrop-blur-md
+
+      backdrop-blur-xl
+
+      bg-white/80
+      dark:bg-black/30
+
       border-b
+      border-zinc-200
+      dark:border-white/10
+
+      transition-all
       "
     >
 
@@ -30,69 +39,192 @@ export default function Navbar() {
         className="
         max-w-7xl
         mx-auto
-        px-6
-        py-4
+
+        px-8
+        h-20
+
         flex
         items-center
         justify-between
         "
       >
 
+        {/* Logo */}
+
         <Link
           href={`/${locale}`}
           className="
+          text-2xl
           font-bold
-          text-xl
+
+          text-zinc-900
+          dark:text-white
+
+          hover:scale-105
+          transition
           "
         >
-          ingcristiangonzalez.lat
+
+          ing
+
+          <span
+            className="
+            text-cyan-500
+            "
+          >
+            cristiangonzalez
+          </span>
+
+          <span
+            className="
+            text-zinc-500
+            dark:text-zinc-400
+            "
+          >
+            .lat
+          </span>
+
         </Link>
 
-        <div className="flex items-center gap-6">
 
-          <ul className="hidden md:flex gap-6">
+        {/* Menú */}
+
+        <div
+          className="
+          flex
+          items-center
+          gap-8
+          "
+        >
+
+          <ul
+            className="
+            hidden
+            md:flex
+            items-center
+            gap-8
+            "
+          >
 
             <li>
+
               <Link
                 href="#experience"
                 className="
+                relative
+
+                text-zinc-700
+                dark:text-zinc-300
+
                 hover:text-cyan-500
-                transition
+
+                transition-all
+                duration-300
+
+                after:absolute
+                after:left-0
+                after:-bottom-2
+                after:h-[2px]
+                after:w-0
+
+                after:bg-cyan-500
+                after:transition-all
+
+                hover:after:w-full
                 "
               >
                 {t("experience")}
               </Link>
+
             </li>
 
+
             <li>
+
               <Link
                 href="#projects"
                 className="
+                relative
+
+                text-zinc-700
+                dark:text-zinc-300
+
                 hover:text-cyan-500
-                transition
+
+                transition-all
+                duration-300
+
+                after:absolute
+                after:left-0
+                after:-bottom-2
+                after:h-[2px]
+                after:w-0
+
+                after:bg-cyan-500
+                after:transition-all
+
+                hover:after:w-full
                 "
               >
                 {t("projects")}
               </Link>
+
             </li>
 
+
             <li>
+
               <Link
                 href="#contact"
                 className="
+                relative
+
+                text-zinc-700
+                dark:text-zinc-300
+
                 hover:text-cyan-500
-                transition
+
+                transition-all
+                duration-300
+
+                after:absolute
+                after:left-0
+                after:-bottom-2
+                after:h-[2px]
+                after:w-0
+
+                after:bg-cyan-500
+                after:transition-all
+
+                hover:after:w-full
                 "
               >
                 {t("contact")}
               </Link>
+
             </li>
 
           </ul>
 
-          <LanguageSwitcher />
 
-          <ThemeToggle />
+          <div
+            className="
+            flex
+            items-center
+            gap-3
+
+            pl-6
+            border-l
+            border-zinc-200
+            dark:border-white/10
+            "
+          >
+
+            <LanguageSwitcher />
+
+            <ThemeToggle />
+
+          </div>
 
         </div>
 

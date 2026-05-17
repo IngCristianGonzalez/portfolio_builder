@@ -3,11 +3,15 @@
     "status":"Disponible para proyectos",
     "title":"Hola, soy",
     "name":"Cristian González",
-    "subtitle":"Ingeniero de Sistemas especializado en sistemas escalables"
+    "subtitle":"Ingeniero de Sistemas",
+    "role": "Ingeniero de Software",
+    "focus": "Sistemas Escalables",
+     "projects": "Proyectos"
   },
   "navbar": {
     "experience": "Experiencia",
     "projects": "Proyectos",
     "contact": "Contacto"
   }
+  
 }

@@ -81,24 +81,27 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 mt-8">
-
-            <button
-              className="
-              px-6
-              py-3
-              rounded-xl
-
-              bg-cyan-500
-              text-black
-
-              font-semibold
-
-              hover:scale-105
-              transition
-              "
-            >
-              {t("projects")}
-            </button>
+<button
+  onClick={() => {
+    document
+      .getElementById("projects")
+      ?.scrollIntoView({
+        behavior: "smooth"
+      });
+  }}
+  className="
+    px-6
+    py-3
+    rounded-xl
+    bg-cyan-500
+    text-black
+    font-semibold
+    hover:scale-105
+    transition
+  "
+>
+  Ver proyectos
+</button>
 
             <DownloadCV/>
 

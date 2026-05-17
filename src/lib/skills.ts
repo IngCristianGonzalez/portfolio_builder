@@ -9,11 +9,19 @@ import {
   SiMysql,
   SiMongodb,
   SiDocker,
-  SiGit
+  SiGit,
+  SiNestjs,
+  SiAngular,
+  SiLinux,
+  SiPython
 } from "react-icons/si";
-
+import { TbDatabase } from "react-icons/tb";
+import { FaAws } from "react-icons/fa";
+import {
+  PowerBIIcon,
+  TableauIcon
+} from "@/lib/custom-icons";
 import { IconType } from "react-icons";
-
 type SkillItem = {
   name: string;
   icon: IconType;
@@ -24,7 +32,8 @@ type TechCategory =
   | "backend"
   | "frontend"
   | "database"
-  | "devops";
+  | "devops"
+  | "datascience";
 
 type SkillGroup = {
   category: string;
@@ -47,6 +56,11 @@ const techItems: Record<TechCategory, SkillItem[]> = {
       name: "Node.js",
       icon: SiNodedotjs,
       className: "text-[#339933]"
+    },
+    {
+      name: "NestJS",
+      icon: SiNestjs,
+      className: "text-[#d33e5e]"
     }
   ],
 
@@ -65,6 +79,11 @@ const techItems: Record<TechCategory, SkillItem[]> = {
       name: "TypeScript",
       icon: SiTypescript,
       className: "text-[#3178C6]"
+    },
+    {
+      name: "Angular",
+      icon: SiAngular,
+      className: "text-[#DD0031]"
     }
   ],
 
@@ -83,6 +102,11 @@ const techItems: Record<TechCategory, SkillItem[]> = {
       name: "MongoDB",
       icon: SiMongodb,
       className: "text-[#47A248]"
+    },
+    {
+      name: "SQL Server",
+      icon: TbDatabase,
+      className: "text-[#CC2927]"
     }
   ],
 
@@ -96,8 +120,36 @@ const techItems: Record<TechCategory, SkillItem[]> = {
       name: "Git",
       icon: SiGit,
       className: "text-[#F05032]"
+    },
+    {
+      name: "AWS",
+      icon: FaAws,
+      className: "text-[#FF9900]"
+    },
+    {
+      name: "Linux",
+      icon: SiLinux,
+      className: "text-[#707070]"
     }
-  ]
+  ],
+
+  datascience: [
+  {
+    name: "Python",
+    icon: SiPython,
+    className: "text-[#3776AB]"
+  },
+  {
+    name: "Power BI",
+    icon: PowerBIIcon,
+    className: "text-[#F2C811]"
+  },
+  {
+    name: "Tableau",
+    icon: TableauIcon,
+    className: "text-[#E97627]"
+  }
+]
 };
 
 export const skills: Record<"es" | "en", SkillGroup[]> = {
@@ -117,6 +169,10 @@ export const skills: Record<"es" | "en", SkillGroup[]> = {
     {
       category: "Cloud / DevOps",
       items: techItems.devops
+    },
+    {
+      category: "Ciencia de datos",
+      items: techItems.datascience
     }
   ],
 
@@ -136,6 +192,10 @@ export const skills: Record<"es" | "en", SkillGroup[]> = {
     {
       category: "Cloud / DevOps",
       items: techItems.devops
+    },
+    {
+      category: "Data Science",
+      items: techItems.datascience
     }
   ]
 };

@@ -1,6 +1,14 @@
 export const projects = {
   es: [
     {
+      title: "Yutori - PWA de Finanzas Personales",
+      description:
+        "PWA (Progressive Web App) de finanzas personales con enfoque offline-first. Permite gestión de ingresos/gastos, importación de PDFs bancarios, estadísticas y soporte multi-idioma (es/en) con almacenamiento local.",
+      stack: ["JavaScript", "Vite", "PWA", "Vitest", "CSS Modules"],
+      github: "https://github.com/IngCristianGonzalez/yutori",
+      demo: "https://yutori-ten.vercel.app/"
+    },
+    {
       title: "Commercial Software Solution ERP",
       description:
         "ERP empresarial para laboratorios farmacéuticos enfocado en procesos comerciales, gestión de clientes y operaciones internas desarrollado con arquitectura escalable.",
@@ -87,6 +95,15 @@ export const projects = {
   ],
 
   en: [
+
+     {
+      title: "Yutori - Personal Finance PWA",
+      description:
+        "Offline-first Personal Finance PWA (Progressive Web App). Enables income/expense management, bank PDF import, statistics, and multi-language support (es/en) with local storage.",
+      stack: ["JavaScript", "Vite", "PWA", "Vitest", "CSS Modules"],
+      github: "https://github.com/IngCristianGonzalez/yutori",
+      demo: "https://yutori-ten.vercel.app/"
+    },
     {
       title: "Commercial Software Solution ERP",
       description:

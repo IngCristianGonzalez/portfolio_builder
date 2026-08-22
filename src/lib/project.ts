@@ -1,5 +1,13 @@
 export const projects = {
   es: [
+   {
+  "title": "SINCR ELECTRIC - Sistema de Inventario",
+  "description": "Sistema de gestión de inventario con código de barras EAN-13, integración con Siigo API y control de movimientos por técnico. Incluye escaneo de códigos de barras, registro de movimientos (entrada/salida), panel de administración, autenticación JWT con roles y diseño responsive mobile-first.",
+  "stack": ["React 18", "TypeScript", "Vite", "Express", "PostgreSQL 15", "Docker", "Nginx", "PrimeReact", "Siigo API", "JWT"],
+  "github": "https://github.com/IngCristianGonzalez/Sincro-electric-inventory",
+  "demo": "#"
+},
+
     {
       title: "Yutori - PWA de Finanzas Personales",
       description:
@@ -95,7 +103,13 @@ export const projects = {
   ],
 
   en: [
-
+    {
+  "title": "SINCR ELECTRIC - Inventory Management System",
+  "description": "Inventory management system with EAN-13 barcode scanning, Siigo API integration, and technician-based movement tracking. Features barcode scanning (USB camera/reader), inventory movement logging (entry/exit), admin panel, JWT authentication with roles, and mobile-first responsive design.",
+  "stack": ["React 18", "TypeScript", "Vite", "Express", "PostgreSQL 15", "Docker", "Nginx", "PrimeReact", "Siigo API", "JWT"],
+  "github": "https://github.com/IngCristianGonzalez/Sincro-electric-inventory",
+  "demo": "#"
+},
      {
       title: "Yutori - Personal Finance PWA",
       description:
